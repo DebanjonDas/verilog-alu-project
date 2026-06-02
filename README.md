@@ -1,4 +1,4 @@
-Markdown
+
 # Parametric N-Bit Arithmetic Logic Unit (ALU)
 
 A highly modular and parametric $N$-bit Arithmetic Logic Unit (ALU) designed and implemented in Verilog HDL. The architecture separates arithmetic operations, logical bitwise operations, shift registries, and comparative circuits into distinct structural submodules, tied together by a top-level multiplexing ALU controller with comprehensive flag generation.
