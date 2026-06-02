@@ -1,3 +1,4 @@
+Markdown
 # Parametric N-Bit Arithmetic Logic Unit (ALU)
 
 A highly modular and parametric $N$-bit Arithmetic Logic Unit (ALU) designed and implemented in Verilog HDL. The architecture separates arithmetic operations, logical bitwise operations, shift registries, and comparative circuits into distinct structural submodules, tied together by a top-level multiplexing ALU controller with comprehensive flag generation.
@@ -58,9 +59,6 @@ iverilog -o alu_simulation alu.v tb.v
 
 # Run the simulation runtime to generate output logs and VCD dumps
 vvp alu_simulation
+
 # Open GTKWave to view the timing waveforms
 gtkwave dump.vcd
-
----
-
-
