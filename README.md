@@ -63,25 +63,4 @@ gtkwave dump.vcd
 
 ---
 
-## 📊 Simulation Results & Waveforms
 
-### 1. GTKWave Timing Diagram
-Below is the behavioral simulation waveform capturing the execution of various arithmetic, logical, and shifting sequences. Note how the status flags (`C`, `Z`, `V`, `N`) instantly update based on the operations and operands.
-
-![GTKWave Simulation Waveforms](assets/gtkwave_screenshot.png)
-
-### 2. Testbench Console Log Output
-The self-checking testbench validates execution boundaries (including overflow and sign changes) and prints the following diagnostic output to the terminal:
-
-```text
-==================================================
-        STARTING PARAMETRIC ALU SIMULATION       
-==================================================
-[TIME: 10ns] OP: ADD    | A: 05 | B: 03 | OUT: 08 | Flags: C=0 Z=0 V=0 N=0 -> PASSED
-[TIME: 20ns] OP: SUB    | A: 02 | B: 05 | OUT: FD | Flags: C=0 Z=0 V=0 N=1 -> PASSED
-[TIME: 30ns] OP: ADD    | A: 7F | B: 01 | OUT: 80 | Flags: C=0 Z=0 V=1 N=1 -> PASSED (Signed Overflow)
-[TIME: 40ns] OP: AND    | A: F0 | B: 0F | OUT: 00 | Flags: C=0 Z=1 V=0 N=0 -> PASSED (Zero Detected)
-[TIME: 50ns] OP: LSHIFT | A: 81 | B: 00 | OUT: 02 | Flags: C=1 Z=0 V=0 N=0 -> PASSED (Carry Out Tracked)
-==================================================
-        SIMULATION COMPLETE: ALL TESTS PASSED     
-==================================================
